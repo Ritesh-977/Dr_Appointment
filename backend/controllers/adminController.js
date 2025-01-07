@@ -90,4 +90,6 @@ const allDoctors = async (req, res)=>{
 }
 
 
+
+
 export {addDoctor, loginAdmin, allDoctors}
