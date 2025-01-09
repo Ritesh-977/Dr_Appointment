@@ -10,13 +10,13 @@ const DoctorContextProvider = (props) => {
 
   const [dToken, setDToken] = useState(localStorage.getItem('dToken')?localStorage.getItem('dToken'):'')
   const [appointments, setAppointments] = useState([])
+  const [dashData, setDashData] = useState(false)
 
   const getAppointments = async () => {
     try {
       const {data} = await axios.get(backendURl + '/api/doctor/appointments', {headers:{dToken}})
      if(data.success){
        setAppointments(data.appointments)
-      //  console.log(data.appointments)
      } else {
       toast.error(data.messsage)
      }
@@ -58,6 +58,22 @@ const DoctorContextProvider = (props) => {
     }
   }
 
+  const getDashData = async () => {
+    try {
+      
+      const {data} = await axios.get(backendURl + '/api/doctor/dashboard',{headers:{dToken}})
+      if(data.success){
+        setDashData(data.dashData)
+        console.log(data.dashData)
+      } else {
+        toast.error(data.message)
+      }
+    } catch (error) {
+      console.log(error)
+      toast.error(error.messsage)
+    }
+  }
+
     const value = {
         backendURl,
         dToken, setDToken,
@@ -65,6 +81,7 @@ const DoctorContextProvider = (props) => {
         getAppointments,
         completeAppointment,
         cancelAppointment,
+        dashData, setDashData, getDashData
     }
 
   return (
