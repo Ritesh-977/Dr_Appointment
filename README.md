@@ -5,7 +5,7 @@
 
 Feature List:
 
--  Tech stack: MERN + Tailwindcss
+-  Tech stack: MERN + Tailwindcss + Cloudinary
 -  Authentication & Authorization with JWT
 -  Admin Login, Doctor Login, Patient Login
 -  Book Appointment, Delete Appointment
