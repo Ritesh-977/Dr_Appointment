@@ -9,7 +9,7 @@ const Footer = () => {
         {/* ------Left Section --------- */}
         <div>
         <img  className='mb-5 w-40' src={assets.logo} alt="" />
-        <p className='w-full md:w-2/3 text-gray-600 leading-6'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat quod nostrum aperiam officia quidem quos voluptatem enim et, non animi repellat ipsam placeat esse iusto officiis vitae velit sint harum?</p>
+        <p className='w-full md:w-2/3 text-gray-600 leading-6'>From pets to farm animals, VetConnect ensures reliable veterinary care when you need it most.</p>
         </div>
 
 
